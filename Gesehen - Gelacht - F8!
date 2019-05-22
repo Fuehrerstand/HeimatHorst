@@ -1,0 +1,89 @@
+Betriebssysteme: Versteh mal Einer, was die da machen!
+
+Was waren das noch Zeiten, als man noch in der Zone mit Hammer und Meissel auf seinen KC-8x eindreschen durfte! 
+Eigentlich kompatibel zum Brotkasten, nur in hässlicherem Gewand hatte ich mehr Erlebnis als heute.
+
+Der Robotron-PC konnte, wenngleich es "Nachhilfe" brauchte, auch den Firlefanz der West-Programme abspielen.
+
+Woher Siemens den ersten 1 MB Chip hatte, wissen vielleicht noch ein paar der Genossen, 
+die Siemens über KoKo seinerzeit belieferten. 
+
+Dann kam die Grenzöffnung und es gab West-PC's in schickem Gehäuse, Peripherie um die Ecke, 
+ohne durch die halbe Republik fahren zu müssen. Soweit, so schön! Doch das vermeindliche Glück währte nicht lange.
+Während in der Zone das Wort "Sicherheit" eine Bedeutung hatte, war es im Westen nur ein "Marketing-Begriff".
+
+Also war unsere erste Amtshandlung ein Warnschuss in Form einer 120 MB Festplatte, die bis heute "ungeknackt" beim BKA liegt.
+Wir hatten also etwas gemacht, was nach westlicher Vorstellung nicht ins Bild passte. Spätere Versuche, 
+diese Vorlage zu immitieren endeten in hoffnungslosen Projekten, die zum desaströsen Weltbild passten. 
+
+Auf Basis dieser Tatsache suchte man händeringend nach einer Lösung, um solche Dinge auf modernen Geräten zu vermeiden.
+So entstand das Kopfschussprojekt UEFI. Unter wirklich erbärmlichster Argumentationslosigkeit jubelte man dem Konsum-Deppen
+eine geistige Bankrott-Erklärung als neues Feature an. Es folgten auf die klassischen BIOS-Systeme die Hybriden (BIOS/UEFI) 
+und inzwischen gibt es nur noch Scheisse die Sicherheit kategorisch untermeniert.
+
+Zum Spass habe ich mir ein ACER Switch 10 besorgt. Da war natürlich die Maleware aus Redmond vorinstalliert, 
+die als Windoof 10 bekannt ist. Penetrant wie Android oder der Byteschrott von Apple ging mir dieser Update-Wahn auf den Sack.
+Wenn man denn wenigstens "Herr" über das Gerät wäre, aber nein. Entgegen dem "Rechtsverständnis" der "Rechtslosen" pfuscht man 
+nicht erst seit dem "Zwangsupdate" mit diesem Zwangsupdate herum. 
+
+Konkret: Ungefragte P2P-Verbindungen, die man als Normalo nicht abstellen kann!
+
+Damit stand fest, dass diese Maleware der sofortigen Endlösung zuzuführen sei. Und dann ging der Spass erst richtig los.
+Booten vom USB-Stift funktionierte - halbwegs! 
+
+* Android-x86/x64 liess sich starten - mit Netzwerk, Bild und Ton.
+* Linux-x86/x64 liess sich starten - mit Bild
+* AmigaOS/x86 präsentierte "Kernelpanic"
+
+Und da wurde ich dann richtig neugierig!
+
+AmigaOS/x86 basiert auf Linux mit entsprechenden Erweiterungen und Emulationen. Bei Youtubski sah ich ein Video,
+welches mir verkündete, dass es auf der Hardware laufen "müsste", die ich auf dem Tisch habe. Tut es aber nicht!
+
+Nächste Haltestelle war dann die Installation eines basistauglichen Linux, wobei ich zunächst Debian als Primus wählte.
+Was soll ich sagen: Erwartungsgemäss vor die Wand gefahren. Zwar liess es sich installieren, nicht aber booten.
+So schmökerte ich auf der Suche nach Erlebnissen anderer Kreativer und stellte fest, dass ich nicht alleine war.
+
+Irgendwann fand ich einen, der es geschafft hatte, diese Spassbremse zu umgehen und versuchte den Arbeitsgang zu replizieren.
+Mit dem Ergebnis des Scheiterns. An anderer Stelle wies jemand auf etwas hin. 
+Was irrational, aber doch irgendwie plausibel erschien, sollte weiterführen. UEFI gibt es in 32 und 64 Bit!
+
+Also brauchte es eine Hybrid-ISO x64-i386. Doch auch dieser Versuch endete an der Wand. Dann habe ich etwas gemacht, 
+was ich eigentlich ungern mache, nämlich ein Derivat namens Ubuntu versucht. Der Standard-Installer präsentierte mir auch die Wand.
+Doch in der Keksperten-Auswahl fand sich ein Eintrag, der mich fröhlich stimmte! 
+
+OEM INSTALLATION ... und siehe da, es ward Licht!
+
+Supi, ich kann jetzt vom internen Speicher booten, ohne Zusatzhilfe wie einem Bootloader von USB.
+
+Nun habe ich ein sehr unterhaltsames Phänomen, welches ich schon aus vorherigen Versuchen kannte. Zwar startet das Ubuntu,
+doch ist es mit gewissen Tücken verbunden. Massive Latenz auf der Tastatur, im Normalmodus verreckt es willkürlich (freeze) und im 
+abgesicherten Modus läuft es - halbwegs. 
+
+Wie zuvor erwähnt, erntete ich bei einem für die Hardware zugeschnittenen AmigaOS bereits einen Kernelpanic.
+Ubuntu/Debian überspringt offenbar diesen Punkt, verkündet aber als Erstes eine absurde Fehlermeldung.
+
+Could not get Memory at: x80000000000000000000
+
+Das kommt nicht von ungefähr! Die Adresse ist immer dieselbe, aber die Grössenordnung passt nicht Ansatzweise zu den Ressourcen.
+
+Im Setup des Klappkastens kann ich das "Trusted Computing Module" formell ausschalten. Allerdings ändert das an der informellen
+Ignoranz natürlich nichts. Es bleibt an, selbst wenn es als ausgeschaltet gesetzt ist. 
+
+Mit Firmware 1.09 bin ich von Firmware 1.10 nicht wirklich weit entfernt und umso spannender fand ich dann, 
+was bei ACER für Bullshit läuft. Man muss Windows haben, um Firmware auf den Stand zu bringen? 
+War ja erstmal Wurst, ob ich es mache, aber "mitnehmen" kann man ja mal. Also lud ich mir die hübsche Zip-Tüte und schaute hinein.
+
+So fand ich unter Anderem einen Keylogger, wo man sich nichtmal die Mühe gemacht hat, den zu verstecken!
+
+Alles in Allem eine sehr "interessante" Erfahrung auf einem Gerät, das mit Windoof 10 flüssig, Farbe und Bunt läuft,
+jedoch eine taktvolle Mitarbeit auf alternativen Systemen vorsätzlich verweigert.
+
+Eigentlich wollte ich um der alten Zeiten willen mal wieder ein Amiga-Demo basteln. Doch bis dahin ist es noch etwas hin.
+
+Jetzt darf ich mich erstmal durch Assembler wurschteln, um mir eine eigene Firmware zu assemblieren. 
+Mal sehen, welche Schubleistung aus dem Ding rauszuholen ist, wenn die geistige Armut beseitigt ist.
+
+Es mag sein, dass China gegenwärtig als Lieferant für solche Geräte dominiert. Es nützt China aber nichts, 
+wenn von dort keiner mehr etwas will. Macht das, was Ihr am Besten könnt: Lächeln!
+
